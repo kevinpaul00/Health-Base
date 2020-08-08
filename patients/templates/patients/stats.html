@@ -1,0 +1,40 @@
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+    <h2>Statistics:</h2>
+    <div class = "task">
+        <h3>Medicine Wanted:</h3>
+        {% for p in medWanted %}
+            <div class = "task">
+                <h4>{{p.0}}</h4>
+                <h6>Count: {{p.1}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class = "task">
+        <h3>Medicine by City:</h3>
+        {% for p in medByCity %}
+            <div class = "task">
+                <h4>{{p.0}}</h4>
+                <h6>City: {{p.1}}, Count: {{p.2}}</h6>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class = "task">
+        <h3>Elder Population:</h3>
+            <div class = "task">
+                <h4>{{old.0.0}}</h4>
+                <h6>Male: {{om.0.0}}, Female: {{of.0.0}}</h6>
+            </div>
+    </div>
+
+    <div class = "task">
+        <h3>Child Population:</h3>
+            <div class = "task">
+                <h4>{{young.0.0}}</h4>
+                <h6>Male: {{ym.0.0}}, Female: {{yf.0.0}}</h6>
+            </div>
+    </div>
+{% endblock %}

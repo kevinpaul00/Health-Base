@@ -1,0 +1,21 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+
+  <form class="person-form" action = "{% url 'patients:create' %}" method = "post">
+    <div class="form-group">
+    {% csrf_token %}
+    {{forms}}
+    <br><br>
+    <input onclick="myFunction()" type="submit" value="Create">
+  </div>
+  </form>
+
+
+  <script>
+    function myFunction() {
+      alert("User added Successfully");
+    }
+  </script>
+  {% endblock %}

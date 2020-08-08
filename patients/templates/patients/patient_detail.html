@@ -1,0 +1,62 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+<h1>{{patient.pname}} : Profile</h1>
+
+    <div class = "task">
+        <p><b>ID:</b>{{patient.pid}}</p>
+        <p><b>Phone: </b>{{patient.phno}}</p>
+        <p><b>Date of Birth: </b>{{patient.dob}}</p>
+    </div>
+
+    <div class = "task">
+        <p><b>Address: </b></p>
+        <p>{{patient.doorno}}, {{patient.street}}</p>
+        <p>{{patient.area}}, {{patient.city}}</p>
+    </div>
+    
+    <div class = "Patients">
+        <h2> <a href="{% url 'patients:add_dependent' patient.pid %}"">Add Dependents</a></h2>
+    </div>
+
+
+    <div class="vertical-center">
+        <a href="{% url 'patients:add_medication' patient.pid %}"><button class="button button1">Add Medication</button></a>
+    
+        <a href="{% url 'patients:add_health_issue' patient.pid %}"><button class="button button2">Add Health Problem</button></a>
+    </div>
+    <br>
+    <h2>Health Issues:</h2>
+    <div class = "Patients">
+        {% for d in hi %}
+            <div class = "task">
+                <h4>{{d.issue}}</h4>
+                <p>Status: <b>{{d.status}}</b></p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Medication:</h2>
+    <div class = "Patients">
+        {% for d in medic %}
+            <div class = "task">
+                <h4>{{d.Medicine}}</h4>
+                <p>Status: <b>{{d.status}}</b></p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2>Dependents:</h2>
+    <div class = "Patients">
+        {% for d in dependent1 %}
+            <div class = "task">
+                <h4>{{d.dname}}</h4>
+                <p>Relation: <b>{{d.drelation}}</b></p>
+                <p>Phone: <b>{{d.dph}}</b></p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

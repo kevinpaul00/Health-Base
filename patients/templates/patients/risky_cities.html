@@ -1,0 +1,14 @@
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+        <h1>Risky Cities</h1>
+        <div class = "task">
+            {% for p in risk %}
+                <div class = "task">
+                    <h2><a href="{{p.0}}">
+                        {{p.0}}</a></h2>
+                    <p>Count: {{p.1}}</p>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}

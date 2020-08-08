@@ -1,0 +1,15 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+    <div class="list">
+    <h3>Active Camps</h3>
+        {% for p in people %}
+            <div class = "task">
+                <b>{{p.area}}</b>
+                <b>Staff Count: {{p.staffcount}}</b><br>
+                <b>{{p.hid}}</b>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

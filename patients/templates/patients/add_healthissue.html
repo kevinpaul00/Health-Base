@@ -1,0 +1,13 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+  <h1>{{patient.pid}} {{patient.pname}}: Health Issue</h1>
+  <form class="person-form" action = "{% url 'patients:add_health_issue' patient.pid %}" method = "post">
+    {% csrf_token %}
+    {{forms}}
+    <br><br>
+    <input type="submit" value="Create">
+  </form>
+
+  {% endblock %}

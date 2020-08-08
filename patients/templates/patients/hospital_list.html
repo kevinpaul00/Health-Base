@@ -1,0 +1,18 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+        <h1>Hospital List</h1>
+        <p>Hospitals</p>
+
+        <div class="list">
+            {% for p in hospital %}
+                <div class = "task">
+                    <h2> <a href="#"">{{p.hname}}</a></h2>
+                    <p>{{p.hid}}</p>
+                    <p>{{p.area}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}

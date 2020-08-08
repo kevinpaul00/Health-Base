@@ -1,0 +1,23 @@
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+<div class = "task">
+        <h1>Total Patient Count: </h1>
+        <h1>{{count}}</h1>
+</div>
+
+<div class = "task">
+        {% for p in male %}
+            <div class = "Patient">
+                <h4>Male: {{p.0}}</h4>
+            </div>
+        {% endfor %}
+
+        {% for p in female %}
+            <div class = "Patient">
+                <h4>Female: {{p.0}}</h4>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

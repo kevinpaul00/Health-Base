@@ -1,0 +1,12 @@
+
+{%extends 'patients/base_layout.html'%}
+
+{% block content %}
+
+  <form class="person-form" action = "{% url 'patients:add_mc'%}" method = "post">
+    {% csrf_token %}
+    {{forms}}
+    <br><br>
+    <input type="submit" value="Create">
+  </form>
+  {% endblock %}

@@ -1,0 +1,135 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Medivisor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<!--
+<style>
+.button {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 85px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+left:30%;
+top:75%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.vertical-center1 {
+  margin: 0;
+  position: absolute;
+left:50%;
+top:75%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.button1{width: 250px;background-color: white;padding:24px 16px;border: 2px solid #4CAF50;} /* Green */
+.button2{background-color:white;width: 250px;padding:24px 16px;border: 2px solid #1589FF;} /* Blue */
+.button1:hover
+{
+background-color: #4CAF50;
+color:white;
+}
+.button2:hover
+{
+background-color: #1589FF;
+color:white;
+}
+h5
+{
+   color:#1589FF;
+   font-size: 8vw;
+    text-align: center;
+   border: 1px solid white;
+  padding: 5px;
+}
+.main
+{
+  margin: 0;
+  position: absolute;
+  left:25%;
+   top:35%;
+   right:20%;
+   font-size: 20px;
+   border-color:white;
+   padding: 10px;
+}
+
+</style>
+-->
+<body >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <nav class="navbar navbar-default navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/images/logo.png" alt="logo" style="width:5vw;">
+    </a>
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="{% url 'plist' %}">Patient</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'hospital_list' %}">Hospital</a</li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'mc_list' %}">Medical Camp</a></li>   
+        <li class="nav-item"><a class="nav-link" href="{% url 'risky_cities' %}">Admin</a></li>
+      </ul>
+    </div>  
+  </nav>
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="assets/images/washHands.PNG" alt="First slide">
+        <div class="carousel-caption">
+          <h3>MAINTAIN HYGIENE</h3>
+          <p>Wash your hands with soap regularly</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/images/socialDistance.PNG" alt="Second slide">
+        <div class="carousel-caption">
+          <h3>SOCIAL DISTANCING</h3>
+          <p>Maintain 6 feet distance from others</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="assets/images/stayHome.PNG" alt="Third slide">
+        <div class="carousel-caption">
+          <h3>STAY HOME</h3>
+          <p>Stay Home, Stay Safe</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</body>
+</html>
